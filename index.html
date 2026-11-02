@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Large Account Sales Sandbox Training 大客户销售沙盘训练 Demo">
+  <title>LAS Sandbox · 大客户销售沙盘</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">LAS</span><span>沙盘训练</span></div>
+      <div class="scenario-badge"><span class="live-dot"></span> 场景进行中</div>
+      <nav class="main-nav" aria-label="主导航">
+        <a class="nav-item active" href="#overview"><span class="nav-icon">◈</span>作战总览</a>
+        <a class="nav-item" href="#roles"><span class="nav-icon">♧</span>角色与团队</a>
+        <a class="nav-item" href="#timeline"><span class="nav-icon">◷</span>推演进程</a>
+        <a class="nav-item" href="#notes"><span class="nav-icon">✦</span>事件记录</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="facilitator"><div class="avatar avatar-purple">L</div><div><strong>林教练</strong><small>Facilitator</small></div><span class="more">···</span></div>
+        <button class="help-link" type="button"><span>?</span> 使用指引</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><div class="breadcrumb">训练营 / <strong>远山科技 · 云迁移项目</strong></div><div class="top-actions"><span class="save-state"><i></i> 已自动保存</span><button class="icon-button" aria-label="通知">♢<b>3</b></button><button class="avatar avatar-orange" aria-label="个人菜单">Z</button></div></header>
+      <section class="page-heading" id="overview"><div><p class="eyebrow">CASE 04 / ENTERPRISE CLOUD</p><h1>把复杂的交易，变成可协作的决策。</h1><p class="subtitle">欢迎回来，张顾问。你的小组需要在 14 天内赢得远山科技的云迁移项目。</p></div><button class="primary-button" id="advanceBtn">推进下一阶段 <span>→</span></button></section>
+
+      <section class="metric-grid" aria-label="项目指标"><article class="metric-card"><span class="metric-label">当前阶段</span><strong>03 <em>/ 05</em></strong><div class="progress"><i style="width:60%"></i></div><small>方案共创 · 剩余 4 天</small></article><article class="metric-card"><span class="metric-label">赢单概率</span><strong id="winRate">68<em>%</em></strong><div class="trend up">↑ 12% <span>vs. 上周</span></div></article><article class="metric-card"><span class="metric-label">客户关系健康度</span><strong>7.8<em>/10</em></strong><div class="health-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="muted"></i><i class="muted"></i></div></article><article class="metric-card accent-card"><span class="metric-label">本轮行动点</span><strong id="actionPoints">12<em> AP</em></strong><small>完成任务可获得行动点</small><button class="text-button" id="viewTasks">查看任务清单 →</button></article></section>
+
+      <div class="content-grid">
+        <section class="panel journey-panel" id="timeline"><div class="panel-head"><div><p class="eyebrow">DEAL JOURNEY</p><h2>交易旅程</h2></div><button class="ghost-button">查看全图 ↗</button></div><div class="journey"><div class="journey-line"></div><div class="journey-step done"><span>01</span><div><strong>建立联系</strong><small>已完成 · 2 天</small></div></div><div class="journey-step done"><span>02</span><div><strong>发现需求</strong><small>已完成 · 3 天</small></div></div><div class="journey-step current"><span>03</span><div><strong>方案共创</strong><small>进行中 · 第 2 天</small></div></div><div class="journey-step"><span>04</span><div><strong>商务谈判</strong><small>未开始</small></div></div><div class="journey-step"><span>05</span><div><strong>签约交付</strong><small>未开始</small></div></div></div></section>
+        <section class="panel roles-panel" id="roles"><div class="panel-head"><div><p class="eyebrow">YOUR TEAM</p><h2>角色与团队</h2></div><button class="ghost-button" id="editRoles">编辑团队 ✎</button></div><div class="team-list"><div class="team-member"><div class="avatar avatar-blue">Z</div><div><strong>张顾问</strong><small>客户经理 · 你</small></div><span class="role-tag">决策者</span></div><div class="team-member"><div class="avatar avatar-yellow">M</div><div><strong>马工</strong><small>解决方案架构师</small></div><span class="role-tag soft">技术顾问</span></div><div class="team-member"><div class="avatar avatar-pink">Q</div><div><strong>乔总</strong><small>销售总监</small></div><span class="role-tag soft">支持角色</span></div></div><button class="add-member" id="addMember">＋ 添加协作角色</button></section>
+      </div>
+
+      <div class="content-grid lower-grid"><section class="panel activity-panel" id="notes"><div class="panel-head"><div><p class="eyebrow">ACTIVITY LOG</p><h2>最近动态</h2></div><button class="ghost-button" id="addNote">＋ 记录事件</button></div><div class="activity-list" id="activityList"><div class="activity"><span class="activity-dot blue"></span><div><strong>客户提出新的合规要求</strong><p>远山科技 · 信息安全部 · 10 分钟前</p></div><span class="activity-score">+2 AP</span></div><div class="activity"><span class="activity-dot orange"></span><div><strong>方案评审会议已预约</strong><p>明天 14:00 · 参与人 6 位</p></div><span class="activity-score">日程</span></div><div class="activity"><span class="activity-dot purple"></span><div><strong>竞品动态：星河云发布新报价</strong><p>市场情报 · 昨天 18:42</p></div><span class="activity-score">情报</span></div></div></section><section class="panel prompt-panel"><div class="prompt-number">04</div><p class="eyebrow">COACHING PROMPT</p><h2>下一步，你会先做什么？</h2><p>客户的安全负责人刚刚加入评审。选择一个行动，观察它如何改变你的交易状态。</p><div class="prompt-actions"><button class="choice-button" data-action="listen">先听取他的担忧 <span>→</span></button><button class="choice-button" data-action="demo">直接演示安全方案 <span>→</span></button><button class="choice-button" data-action="delegate">请架构师主导沟通 <span>→</span></button></div></section></div>
+      <footer>LAS SANDBOX TRAINING <span>·</span> 内部训练环境 <span>·</span> 场景编号 2024-04</footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
